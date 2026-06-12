@@ -44,7 +44,7 @@ MAKEFLAGS="-j1" colcon build --executor sequential
 
 启动与关闭
 ```
-ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 1\ 		(开启雷达)
-ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 0\ 		(关闭雷达)
+ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 1 		(开启雷达)
+ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 0 		(关闭雷达)
 ```
 
