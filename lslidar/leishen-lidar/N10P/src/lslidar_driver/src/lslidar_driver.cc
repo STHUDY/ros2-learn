@@ -1005,7 +1005,9 @@ namespace lslidar_driver
 
 					for (int i = 0; i < count_num; i++)
 					{
-						int point_idx = round((360 - points[i].degree) * count_num / 360);
+						// int point_idx = round((360 - points[i].degree) * count_num / 360);
+
+						int point_idx = ((int)round((360 - points[i].degree) * count_num / 360)) % count_num;
 						if (points[i].range == 0.0)
 						{
 							scan->ranges[point_idx] = std::numeric_limits<float>::infinity();
@@ -1024,7 +1026,7 @@ namespace lslidar_driver
 						}
 						else
 						{
-							double dist = points[i+3000].range;
+							double dist = points[i + 3000].range;
 							scan->ranges[point_idx + count_num] = (float)dist;
 							scan->intensities[point_idx + count_num] = points[i + 3000].intensity;
 						}
@@ -1376,7 +1378,7 @@ namespace lslidar_driver
 			else
 				LslidarDriver::data_processing(packet_bytes, len);
 		}
-		delete packet_bytes;
+		delete[] packet_bytes;
 		return true;
 	}
 

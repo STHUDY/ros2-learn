@@ -6,6 +6,8 @@
 ```
 sudo apt install colcon python3-colcon-common-extensions
 sudo apt install libpcap-dev
+sudo apt install ros-$ROS_DISTRO-slam-toolbox
+sudo apt install ros-$ROS_DISTRO-cartographer ros-$ROS_DISTRO-cartographer-ros
 ```
 
 ## 编译
@@ -48,3 +50,8 @@ ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 1 		(开启雷达)
 ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 0 		(关闭雷达)
 ```
 
+## 提示
+
+SLAM 建模必须使用 IMU 数据
+
+Cartographer 可单激光雷达建模
