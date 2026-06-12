@@ -37,3 +37,14 @@ colcon build --parallel-workers 1
 ```
 MAKEFLAGS="-j1" colcon build --executor sequential
 ```
+
+## 运行
+
+静默启动
+
+启动与关闭
+```
+ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 1\ 		(开启雷达)
+ros2 topic pub -1 /lslidar_order std_msgs/msg/Int8 data:\ 0\ 		(关闭雷达)
+```
+
