@@ -21,5 +21,5 @@
     pubScan: true                                           #是否发布scan话题
     pubPointCloud2: true                                    #是否发布pointcloud2话题
     pointcloud_topic: /lslidar_point_cloud                  #设置激光数据topic名称
-#    pcap: /home/ls/work/2211/M10_P_gps.pcap                 #雷达是否使用pcap包读取功能
+#    pcap: /home/ls/work/2211/M10_P_gps.pcap                #雷达是否使用pcap包读取功能
 #    in_file_name: /home/ls/1.txt                           #雷达是否使用txt文件读取功能
